@@ -7,7 +7,7 @@ Photon PUN2를 이용한 멀티게임
    * [Photon을 이용한 술래잡기 게임을 만들어보자](lecture/lecture1-1.md)
    
 2. Photon설정하기
-   * [Photon설정하기](lecture/lecutre2-1.md)
+   * [Photon설정하기](lecture/lecture2-1.md)
    
 3. 메뉴 만들기
    * [메뉴 만들기)](lecture/lecture3-1.md)

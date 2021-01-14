@@ -1,10 +1,8 @@
-왜 다른 플랫폼 말고 PC환경으로 만드는가
+Photon 설정하기
 ========================================
-![드레이크](https://github.com/isp829/HU/blob/master/images/lecture2/drake.jpg)
-
-![하지마그냥](https://github.com/isp829/HU/blob/master/images/lecture2/joy.PNG)
-
-* PC환경에서 만드는게 제일 단순하고 편하다.  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture1/lecture2-1/2-1-1.png" width="50%"><img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture1/lecture2-1/2-1-2.PNG" width="50%">  
+  
+* 3D프로젝트 하나 만들어주자.  
 ------------------------------ 
 [목차로](https://github.com/isp829/HU/blob/master/README.md)  
 [다음](https://github.com/isp829/HU/blob/master/lecture/lectureA.md)  
