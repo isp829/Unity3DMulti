@@ -1,124 +1,119 @@
-다른 물체들과 상호작용 만들기
+메뉴 만들기
 =======================
-![collision](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-1.PNG)
-![trigger](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-2.PNG)  
-* unity에서 물체끼리 상호작용할때 제일 많이 쓰이는 OnCollision과 OnTrigger에 대해서 알아보자.  
----------------------------------------------------  
-![collision](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-1.PNG)
-* OnCollision은 상호작용할 두물체에 각각 rigidbody와 collider가 필요하다.
-* 물체의 면끼리 접촉하는걸로 작동한다.  
-* 상태에 따라 명령어를 Enter, Stay, Exit으로 표현할 수 있다.  
---------------------------------------------------------------------------------------    
-![trigger](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-2.PNG)   
-* OnTrigger는 상호작용한 두물체에 collider가 필요하지만, rigidbody는 하나만 있어도 된다.  
-* 면끼리 접촉뿐만 아니라 서로 겹치는것도 된다.  
-* 상태에 따라 명령어를 Enter, Stay, Exit으로 표현할 수 있다.  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-1.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-2.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-3.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-4.PNG" width="50%">  
+
+* Room Menu를 만들어주고 그안에 텍스트 메쉬프로를 넣어준다.  
+* 크기와 위치들을 조정해준다.  
+
+-------------------------------------------------------------   
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-5.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-6.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-7.PNG" width="50%">  
+
+* Create room에 있는 버튼을 복사 붙여넣기 해준다.  
+* 크기와 위치 조정을 해주고 버튼에 글자를 수정해준다.  
+
+-------------------------------------------------------------   
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-8.PNG" width="50%">  
+
+* game창에서 보면 이런 상태로 보인다.  
+
 ------------------------------------------------------------- 
-![stay](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-3.PNG)
-![enter](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-4.PNG)
-![exit](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-5.PNG) 
-* 그림과 같이 stay는 접촉하고있을때, enter는 처음 접촉할때. exit는 접촉이 떨어질때 호출된다.  
--------------------------------------------------------------    
-![최적화짤](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-6.png) 
-* OnCollison이 물체마다 rigidbody를 사용하므로 게임내 object들이 많아질수록 OnTrigger에 비해 최적화가 안좋다.   
--------------------------------------------------------------    
-![3-3-7](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-7.png)   
-* 게임에 쓸 object들을 가져와준다.  
-* 밟으면 죽는 장애물과 스테이지 클리어용 포탈을 가져왔다.  
-------------------  
-![3-3-8](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-8.png)   
-* 각각 object에 polygon collider 2D를 넣어준다.  
-* OnTrigger를 쓸것이므로 Is Trigger를 체크해 주자.    
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-9.png" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-10.PNG" width="50%">  
+
+* menu스크립트를 넣어주고 이름을 넣어준다.   
+* canvas에 추가한 메뉴를 넣어준다.  
+
 -------------------------------------------------------------   
-![3-3-9](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-9.png)   
-* 장애물에는 spike tag를, 포탈에는 goal tag를 해준다.  
-* 계속 쓸 object들이므로 prefab해주는게 좋다.  
--------------------------------------------------------------
-![3-3-10](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-10.PNG)   
-* 코드를 추가해 주자. 특정 object와 접촉하면 특정 scene을 불러와야 하므로 SceneManagement를 추가해주자.  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-11.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-12.PNG" width="50%">  
+
+* room menu를 복사 붙여넣기 해서 error메뉴를 만들어준다.  
+* 텍스트들을 수정해준다.  
+
 -------------------------------------------------------------   
-![3-3-11](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-11.PNG)   
-* 일단은 spike에 닿아도 재시작, goal에 닿아도 재시작하게 코드를 짜주자.   
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-13.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-14.PNG" width="50%">  
+
+* menu스크립트를 넣어주고 이름을 넣어준다.   
+* canvas에 추가한 메뉴를 넣어준다. 
+
+-------------------------------------------------------------   
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-15.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-16.PNG" width="50%">  
+
+* launcher 스크립트를 열어서 room메뉴와 error메뉴 스크립트를 작성해준다.
+
 -------------------------------------------------------------   
 ```
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Mathematics;
-using UnityEngine.SceneManagement;
-public class test : MonoBehaviour
+using Photon.Pun;//포톤 기능 사용
+using TMPro;//텍스트 메쉬 프로 기능 사용
+
+public class Launcher : MonoBehaviourPunCallbacks//다른 포톤 반응 받아들이기
 {
-    public float moveSpeed = 5.0f; //플레이어 이동 속도
-    public float jumpPower = 5.0f; //플레이어 점프 힘
-    public Rigidbody2D rigid;
-    float horizontal; //왼쪽, 오른쪽 방향값을 받는 변수
-    public bool isground;//값을 받을 bool값
-    public Transform groundCheck;//player발위치
-    public float groundRadius = 0.2f;//측정할 범위
-    public LayerMask whatIsGround;//어떤 layer를 측정할지
-    public Animator animator;//애니메이터 추가
-    private void Start()
+    [SerializeField] TMP_InputField roomNameInputField;
+    [SerializeField] TMP_Text errorText;
+    void Start()
     {
-        rigid = GetComponent<Rigidbody2D>();
+        Debug.Log("Connecting to Master");
+        PhotonNetwork.ConnectUsingSettings();//설정한 포톤 서버에 때라 마스터 서버에 연결
     }
-    private void FixedUpdate()
+
+    public override void OnConnectedToMaster()//마스터서버에 연결시 작동됨
     {
-        isground = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
-        if (isground == true)
-        {
-            animator.SetBool("jump", false);
-        }
-        Move(); //플레이어 이동
-        Jump(); //점프   
+        Debug.Log("Connected to Master");
+        PhotonNetwork.JoinLobby();//마스터 서버 연결시 로비로 연결
     }
-    void OnTriggerEnter2D(Collider2D col)
+
+    public override void OnJoinedLobby()//로비에 연결시 작동
     {
-        if (col.gameObject.tag == "spike")
-        {
-            SceneManager.LoadScene("test");
-        }
-        if (col.gameObject.tag == "goal")
-        {
-            SceneManager.LoadScene("test");
-        }
+        MenuManager.Instance.OpenMenu("title");//로비에 들어오면 타이틀 메뉴 키기
+        Debug.Log("Joined Lobby");
     }
-    void Jump()
+    public void CreateRoom()//방만들기
     {
-        if (Input.GetButton("Jump")) //점프 키가 눌렸을 때//ground이면서 스페이스바 누르면 
+        if (string.IsNullOrEmpty(roomNameInputField.text))
         {
-            if (isground == true) //점프 중이지 않을 때
-            {
-                animator.SetBool("jump", true);//점프하면 애니메이터 설정 jump true.
-                rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse); //위쪽으로 힘을 준다.
-                isground = false;
-            }
-            else return; //점프 중일 때는 실행하지 않고 바로 return.
+            return;//방 이름이 빈값이면 방 안만들어짐
         }
+        PhotonNetwork.CreateRoom(roomNameInputField.text);//포톤 네트워크기능으로 roomNameInputField.text의 이름으로 방을 만든다.
+        MenuManager.Instance.OpenMenu("loading");//로딩창 열기
     }
-    void Move()
+
+    public override void OnJoinedRoom()//방에 들어갔을때 작동
     {
-        horizontal = Input.GetAxis("Horizontal");
-        if (horizontal != 0)
-        {
-            animator.SetBool("walk", true);//애니메이터 설정 walk를 true.
-            if (horizontal >= 0) this.transform.eulerAngles = new Vector3(0, 0, 0);
-            else this.transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-        else 
-        {
-            animator.SetBool("walk", false);//좌우로 안움직이면 애니메이터 설정 walk false.
-        }
-        Vector3 dir = math.abs(horizontal) * Vector3.right; //변수의 자료형을 맞추기 위해 생성한 새로운 Vector3 변수
-        this.transform.Translate(dir * moveSpeed * Time.deltaTime); //오브젝트 이동 함수
+        MenuManager.Instance.OpenMenu("room");//룸 메뉴 열기
+    }
+
+    public override void OnCreateRoomFailed(short returnCode, string message)//방 만들기 실패시 작동
+    {
+        errorText.text = "Room Creation Failed: " + message;
+        MenuManager.Instance.OpenMenu("error");//에러 메뉴 열기
     }
 }
 ```
-* 코드 전문이다. 추가된 코드들이 무엇을 뜻하는지 생각하면서 써보자.  
+
+* 수정한 코드의 전문이다. 
+
+------------------
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-17.png" width="50%">  
+
+* canvas에 수정한 스크립트 요소들을 추가해 준다.  
+
 -------------------------------------------------------------   
-![3-3-12](https://github.com/isp829/HU/blob/master/images/lecture3/3-3/3-3-12.PNG)   
-* 실행해보면 잘된다.  
--------------------------------------------------------------   
-[목차로](https://github.com/isp829/HU/blob/master/README.md)  
-[다음](https://github.com/isp829/HU/blob/master/lecture/lecture5-1.md)  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-18.PNG" width="50%"><img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-19.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-20.PNG" width="50%"><img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-21.PNG" width="50%">  
+
+* 만들어준 버튼들을 눌렀을때 어떤 행동을 해야 할지 생각하면서 눌렀을때 행동들을 다 정해준다.  
+
+---------------------------------------------  
+[목차로](https://github.com/isp829/3dunitymulty/blob/master/README.md)  
+[다음](https://github.com/isp829/3dunitymulty/blob/master/lecture/lecture3-4.md)  
 -----------------------------
-    
