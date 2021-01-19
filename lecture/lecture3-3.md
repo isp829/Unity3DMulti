@@ -108,9 +108,7 @@ public class Launcher : MonoBehaviourPunCallbacks//다른 포톤 반응 받아�
 * canvas에 수정한 스크립트 요소들을 추가해 준다.  
 
 -------------------------------------------------------------   
-<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-18.PNG" width="50%"><img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-19.PNG" width="50%">  
-<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-20.PNG" width="50%"><img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-21.PNG" width="50%">  
-
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-18.PNG" width="33%"><img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-19.PNG" width="33%"><img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-3/3-3-20.PNG" width="33%">
 * 만들어준 버튼들을 눌렀을때 어떤 행동을 해야 할지 생각하면서 눌렀을때 행동들을 다 정해준다.  
 
 ---------------------------------------------  
