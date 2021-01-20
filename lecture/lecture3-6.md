@@ -21,7 +21,7 @@
 * 텍스트를 프리펩화 시켜준다. 
 
 -------------------------------------------------------------   
-<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-5/3-6-6.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-6/3-6-6.PNG" width="50%">  
 
 * Player List Item 스크립트를 작성한다. 
 
