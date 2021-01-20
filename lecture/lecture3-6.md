@@ -210,6 +210,6 @@ public class Launcher : MonoBehaviourPunCallbacks//다른 포톤 반응 받아�
 * 빌드한다음 여러개를 실행시켜보면 새로운 사람이 방에 들어올때마다 목록에 추가되는걸 볼 수 있다.  
 
 ----------------------- 
-[목차로](https://github.com/isp829/3dunitymulty/blob/master/README.md)  
-[다음](https://github.com/isp829/3dunitymulty/blob/master/lecture/lecture3-7.md)  
+[목차로](https://github.com/isp829/Unity3DMulti/blob/master/README.md)  
+[다음](https://github.com/isp829/Unity3DMulti/blob/master/lecture/lecture3-7.md)  
 -----------------------------
