@@ -234,10 +234,11 @@ public class Launcher : MonoBehaviourPunCallbacks//다른 포톤 반응 받아�
 -----------------------   
 <img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-6/3-6-20.PNG" width="50%">  
 <img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-6/3-6-21.PNG" width="50%">  
-
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-6/3-6-22.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture3/lecture3-6/3-6-23.PNG" width="50%">  
 
 * launcher 스크립트를 수정해주자.  
-* 방에 들어온사람들이 모두 같은 scene을 보도록 해주고 start game을 누르면 아까 만든 game scene을 불러오게 해주자.  
+* 방에 들어온사람들이 모두 같은 scene을 보도록 해주고 방장이 start game을 누르면 아까 만든 game scene을 불러오게 해주자.  
 
 -----------------------  
 ```
@@ -260,6 +261,7 @@ public class Launcher : MonoBehaviourPunCallbacks//다른 포톤 반응 받아�
     [SerializeField] GameObject roomListItemPrefab;
     [SerializeField] Transform playerListContent;
     [SerializeField] GameObject playerListItemPrefab;
+    [SerializeField] GameObject startGameButton;
 
     void Awake()
     {
@@ -305,6 +307,12 @@ public class Launcher : MonoBehaviourPunCallbacks//다른 포톤 반응 받아�
             Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(players[i]);
             //내가 방에 들어가면 방에있는 사람 목록 만큼 이름표 뜨게 하기
         }
+        startGameButton.SetActive(PhotonNetwork.IsMasterClient);//방장만 게임시작 버튼 누르기 가능
+    }
+
+    public override void OnMasterClientSwitched(Player newMasterClient)//방장이 나가서 방장이 바뀌었을때
+    {
+        startGameButton.SetActive(PhotonNetwork.IsMasterClient);//방장만 게임시작 버튼 누르기 가능
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)//방 만들기 실패시 작동
@@ -312,6 +320,7 @@ public class Launcher : MonoBehaviourPunCallbacks//다른 포톤 반응 받아�
         errorText.text = "Room Creation Failed: " + message;
         MenuManager.Instance.OpenMenu("error");//에러 메뉴 열기
     }
+
 
     public void StartGame()
     {
@@ -356,6 +365,7 @@ public class Launcher : MonoBehaviourPunCallbacks//다른 포톤 반응 받아�
         //instantiate로 prefab을 playerListContent위치에 만들어주고 그 프리펩을 이름 받아서 표시. 
     }
 }
+
 
 ```
 
