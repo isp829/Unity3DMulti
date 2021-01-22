@@ -86,10 +86,8 @@ public class RoomManager : MonoBehaviourPunCallbacks//다른 포톤 반응 받�
 * 프리펩화 시켜줬으면 scene에서는 삭제해준다. 
 
 --------------------------------   
-<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-9.PNG" width="50%">   
-<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-10.PNG" width="50%">   
-<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-11.PNG" width="50%">   
-<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-12.PNG" width="50%">   
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-9.PNG" width="50%"><img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-10.PNG" width="50%">   
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-11.PNG" width="50%"><img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-12.PNG" width="50%">   
 
 * 빌드해보고 실행한후 게임을 시작하면 Player Manager가 두개가 된다.  
 * Player Manager들을 확인하면 각각 주인이 정해져있는걸 볼 수 있다.  
