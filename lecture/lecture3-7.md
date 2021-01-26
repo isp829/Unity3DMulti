@@ -267,6 +267,6 @@ public class MenuManager : MonoBehaviour
 
 -------------------------  
 
-[목차로](https://github.com/isp829/3dunitymulty/blob/master/README.md)  
-[다음](https://github.com/isp829/3dunitymulty/blob/master/lecture/lecture3-8.md)  
+[목차로](https://github.com/isp829/Unity3DMulti/blob/master/README.md)  
+[다음](https://github.com/isp829/Unity3DMulti/blob/master/lecture/lecture4-1.md)  
 -----------------------------
