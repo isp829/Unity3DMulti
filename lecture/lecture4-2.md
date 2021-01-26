@@ -54,6 +54,6 @@ public class PlayerManager : MonoBehaviour
 * Game Scene에서 메인카메라의 audio listener를 해제해 주자.  
 
 ------------------------------------------------------       
-[목차로](https://github.com/isp829/3dunitymulty/blob/master/README.md)  
-[다음](https://github.com/isp829/3dunitymulty/blob/master/lecture/lecture5-1.md)  
+[목차로](https://github.com/isp829/Unity3DMulti/blob/master/README.md)  
+[다음](https://github.com/isp829/Unity3DMulti/blob/master/lecture/lecture5-1.md)  
 -----------------------------
