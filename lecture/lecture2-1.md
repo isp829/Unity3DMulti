@@ -63,7 +63,7 @@ Photon 설정하기
 
 ------------------------------     
 [목차로](https://github.com/isp829/Unity3DMulti/blob/master/README.md)  
-[다음](https://github.com/isp829/Unity3DMulti/blob/master/lecture/lectureA.md)  
+[다음](https://github.com/isp829/Unity3DMulti/blob/master/lecture/lecture3-1.md)  
 -----------------------------
     
 
