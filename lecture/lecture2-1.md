@@ -62,8 +62,8 @@ Photon 설정하기
 * 여러가지 서버 설정을 변경할 수 있지만 지금은 만질필요 없다.  
 
 ------------------------------     
-[목차로](https://github.com/isp829/HU/blob/master/README.md)  
-[다음](https://github.com/isp829/HU/blob/master/lecture/lectureA.md)  
+[목차로](https://github.com/isp829/Unity3DMulti/blob/master/README.md)  
+[다음](https://github.com/isp829/Unity3DMulti/blob/master/lecture/lectureA.md)  
 -----------------------------
     
 
