@@ -9,7 +9,7 @@ Photon을 이용한 술래잡기 게임을 만들어보자.
 * 공짜로 제공되는 Photon을 이용해서 유니티로 3D 술래잡기 게임을 만들어보자.     
 
 ------------------------------------------------------       
-[목차로](https://github.com/isp829/Unity3DMulti/blob/master/README.md)  
-[다음](https://github.com/isp829/Unity3DMulti/blob/master/lecture/lecture2-1.md)  
+[목차로](https://github.com/isp829/3dunitymulty/blob/master/README.md)  
+[다음](https://github.com/isp829/3dunitymulty/blob/master/lecture/lecture2-1.md)  
 -----------------------------
     

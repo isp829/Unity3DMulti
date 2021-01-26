@@ -1,4 +1,4 @@
-룸/플레이어 매니저 만들기
+룸/플레이어 매니저 만들기 
 =======================
 <img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-1.PNG" width="50%">   
 
@@ -93,10 +93,79 @@ public class RoomManager : MonoBehaviourPunCallbacks//다른 포톤 반응 받�
 * Player Manager들을 확인하면 각각 주인이 정해져있는걸 볼 수 있다.  
 
 --------------------------------   
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-13.png" width="50%">   
 
+* Photon에서 기본으로 제공되는 예제들에 PlayerManager의 이름을 가진 스크립트가 존재하므로 Demos들을 지워준다.  
 
-[목차로](https://github.com/isp829/Unity3DMulti/blob/master/README.md)  
-[다음](https://github.com/isp829/Unity3DMulti/blob/master/lecture/lecture5-1.md)  
+--------------------------------   
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-14.PNG" width="50%">   
+
+* PlayerManager 스크립트를 만들어준다.    
+
+--------------------------------   
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-15.PNG" width="50%">   
+
+* 간단하게 포톤뷰를 가지고 내 포톤뷰가 맞으면 로그를 보내도록 코드를 짜주자.  
+
+--------------------------------   
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Photon.Pun;
+using System.IO;//path사용위해
+
+public class PlayerManager : MonoBehaviour
+{
+    PhotonView PV;//포톤뷰 선언
+
+    void Awake()
+    {
+        PV = GetComponent<PhotonView>();   
+    }
+
+    void Start()
+    {
+        if (PV.IsMine)//내 포톤 네트워크이면
+        {
+            CreateController();//플레이어 컨트롤러 붙여준다. 
+        }
+    }
+    void CreateController()//플레이어 컨트롤러 만들기
+    {
+        Debug.Log("Instantiated Player Controller");
+    }
+}
+
+```
+
+* PlayerManager스크립트의 전문이다.  
+
+-----------------------
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-16.PNG" width="50%">   
+
+* PlayerManager 프리펩에 PlayerManager스크립트를 넣어준다.  
+
+--------------------------------   
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-17.png" width="50%">   
+
+* 실행해서 디버그를 보면 잘 싱행되는걸 알 수 있다.  
+
+--------------------
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-18.PNG" width="50%">  
+
+* 3D Object capsule을 하나 만들고 이름붙여주자.  
+
+------------------------------------------------------       
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-19.png" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture4/lecture4-1/4-1-20.PNG" width="50%">  
+
+* PlayerController안에 camera도 추가해주고 위치를 조절해준다.  
+* 포톤 뷰도 추가해준다.  
+
+------------------------------------------------------       
+[목차로](https://github.com/isp829/3dunitymulty/blob/master/README.md)  
+[다음](https://github.com/isp829/3dunitymulty/blob/master/lecture/lecture4-2.md)  
 -----------------------------
 
     

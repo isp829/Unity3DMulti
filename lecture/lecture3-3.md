@@ -113,6 +113,6 @@ public class Launcher : MonoBehaviourPunCallbacks//다른 포톤 반응 받아�
 * 만들어준 버튼들을 눌렀을때 어떤 행동을 해야 할지 생각하면서 눌렀을때 행동들을 다 정해준다.  
 
 ---------------------------------------------  
-[목차로](https://github.com/isp829/Unity3DMulti/blob/master/README.md)  
-[다음](https://github.com/isp829/Unity3DMulti/blob/master/lecture/lecture3-4.md)  
+[목차로](https://github.com/isp829/3dunitymulty/blob/master/README.md)  
+[다음](https://github.com/isp829/3dunitymulty/blob/master/lecture/lecture3-4.md)  
 -----------------------------
