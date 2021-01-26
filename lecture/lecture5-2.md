@@ -415,6 +415,6 @@ public class PlayerController : MonoBehaviour
 
 * 수정한 PlayerController스크립트의 전문이다.  
 ------------------
-[목차로](https://github.com/isp829/3dunitymulty/blob/master/README.md)  
-[다음](https://github.com/isp829/3dunitymulty/blob/master/lecture/lecture6-1.md)  
+[목차로](https://github.com/isp829/Unity3DMulti/blob/master/README.md)  
+[다음](https://github.com/isp829/Unity3DMulti/blob/master/lecture/lecture6-1.md)  
 -----------------------------     
