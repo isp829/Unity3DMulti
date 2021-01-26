@@ -164,8 +164,8 @@ public class PlayerManager : MonoBehaviour
 * 포톤 뷰도 추가해준다.  
 
 ------------------------------------------------------       
-[목차로](https://github.com/isp829/3dunitymulty/blob/master/README.md)  
-[다음](https://github.com/isp829/3dunitymulty/blob/master/lecture/lecture4-2.md)  
+[목차로](https://github.com/isp829/Unity3DMulti/blob/master/README.md)  
+[다음](https://github.com/isp829/Unity3DMulti/blob/master/lecture/lecture4-2.md)  
 -----------------------------
 
     
