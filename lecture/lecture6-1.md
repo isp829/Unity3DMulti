@@ -1,221 +1,248 @@
-player개선하기  
+사용할 아이템 만들기      
 =======================
-![6-1-1](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-1.PNG)
-* 지금 상태에서는 스페이스바를 짧게 누르건 길게 누르건 똑같은 높이를 점프를한다.  
-* 점프키를 누른 시간에 비례해 점프하게는 못만들까?
---------------------------------------------------------
-![6-1-2](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-2.PNG)
-![6-1-3](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-3.PNG)
-* 지금 쓰고있는 rigid.AddForc말고 rigid.velocity를 사용하여 스페이스바를 누르면 위쪽으로 힘을 밭고,  
-스페이스바를 띈 순간 속도가 절반이 되도록 코드를 짜보자.  
---------------------------------------------------------
-![6-1-4](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-4.PNG)
-* 실행해보면 점프를 살짝 누르면 아주 낮게 점프를 하는걸 볼 수 있다.
---------------------------------------------------------
-![6-1-5](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-5.PNG)
-* 다음은 점프 판정을 좀 넉넉하게 만들어주자.  
-* 게임할때도 난 분명히 스킬을 눌렀는데 스킬이 안나가서 죽는경우가 있었을 것이다.
-* 바닥에서 떨어진지 0.2초 까지는 공중에서 점프 할 수 있게 해주자.   
---------------------------------------------------------
-![6-1-6](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-6.PNG)  
-![6-1-7](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-7.PNG)
-* jumpTime과 jumpCounter를 만들어서 점프 판정을 좀 넉넉하게 만들어주자.   
---------------------------------------------------------
-![6-1-8](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-8.PNG)
-* 실행해 보면 바닥에서 떨어지고 나서 빠르게 점프하면 점프가 먹힌다.  
------------------------   
-![6-1-9](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-9.PNG)
-* 점프를 늦게 눌러도 작동하게 만들었으니까 점프를 좀 일찍 눌러놔서 선입력을 받게 해주자.  
-* 선입력이란 게임에서 내가 스킬을 시전하고 있는 와중에 다른기술 키를 누르면  
-지금 쓰고 있는 기술이 끝나자마자 다른기술이 나가는 시스템이다.
-* 롤에서도 CC기 맞기 전에 스킬을 미리 선입력 해놓으면 내 캐릭터는 CC기에 맞은 상태지만 스킬이 나간다.
------------------------   
-![6-1-10](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-10.PNG)  
-![6-1-11](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-11.PNG)  
-![6-1-12](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-12.PNG)  
-* jumpBufferCount와 jumpBufferLength를 사용하여 코드를 수정해주자.  
-* jumpBufferLentght의 시간만큼 선입력이 가능하다.  
-* 이제 버튼 누른다고 점프 조건이 아니므로 코드들을 수정해주자.  
------------------------   
-![6-1-13](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-13.PNG)
-* 실행해 보면 바닥에 닿기전에 점프키를 누르면 바닥에 닿자마자 점프한다.  
------------------------   
-![6-1-14](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-14.png)
-* 보통 게임에서는 피격시 캐릭터가 불투명하게 변하면서 그동안은 무적 판정이 있다.
------------------------   
-![6-1-15](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-15.PNG)  
-![6-1-16](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-16.PNG)  
-![6-1-17](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-17.PNG)  
-* Color기능과 Physics2D.IgnoreLayerCollision기능을 사용하여 구현해보자.
-* Color의 a값을 조절하면 푸명토를 조절할 수 있다.  
-* Physics2D.IgnoreLayerCollision기능을 사용하면 두 레이어 사이의 상호작용을 없앨 수 있다.  
-* player를 layer9번에, enemy를 layer10번에 넣어주자.  
------------------------   
-![6-1-18](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-18.PNG)  
-![6-1-19](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-19.PNG)  
-![6-1-20](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-20.PNG)  
-![6-1-21](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-21.PNG)  
-* 코드들을 사용해 구현해주자.  
------------------------ 
-![6-1-22](https://github.com/isp829/HU/blob/master/images/lecture6/6-1/6-1-22.PNG)  
-* 실행해보면 enemy와 접촉시 반투명이 되고 3초동안 상호작용이 안일어난다.    
---------------  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-1.PNG" width="50%">  
+
+* 아이템을 만들기위해서 ItemInfo와 GunInfo 스크립트를 작성해주자.   
+
+------------------------------------------------------     
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-2.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-3.PNG" width="50%">  
+
+
+* 각각 ItemInfo와 GunInfo의 스크립트이다.  
+* ScriptableObject를 사용하여 간단하게 많은 양의 프리펩들에 정보를 넣어 줄 수 있다.  
+* GunInfo는 ItemInfo를 받아서 New Gun menu를 만들도록 해주자.  
+
+------------------------------------------------------  
 ```
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Mathematics;
-using UnityEngine.SceneManagement;
-public class test : MonoBehaviour
-{
-    public float moveSpeed = 5.0f; //플레이어 이동 속도
-    private float realMoveSpeed = 5.0f;//실제 이동 속도
-    public float jumpPower = 5.0f; //플레이어 점프 힘
-    private float realJumpPower = 5.0f;//실제 점프 힘
-    public Rigidbody2D rigid;
-    float horizontal; //왼쪽, 오른쪽 방향값을 받는 변수
-    public bool isground;//값을 받을 bool값
-    public Transform groundCheck;//player발위치
-    public float groundRadius = 0.2f;//측정할 범위
-    public LayerMask whatIsGround;//어떤 layer를 측정할지
-    public Animator animator;//애니메이터 추가
-    public float jumpTime = 0.2f;//점프 후입력
-    public float jumpCounter;
-    public float jumpBufferLength=0.2f;//점프 선입력
-    public float jumpBufferCount;
-    Renderer rend;
-    Color c;
-    private void Start()
-    {
-        rigid = GetComponent<Rigidbody2D>();
-        rend = GetComponent<Renderer>();
-        c = rend.material.color;
-    }
-    private void Update()
-    {
-        isground = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
-        if (isground == true)
-        {
-            animator.SetBool("jump", false);
-        }
-        Move(); //플레이어 이동
-        Jump(); //점프   
-    }
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "spike")
-        {
-            SceneManager.LoadScene("test");
-           
-        }
-        if (col.gameObject.tag == "goal")
-        {
-            SceneManager.LoadScene("test");
-        }
-    }
-    IEnumerator GetInvulnerable() 
-    {
-        Debug.Log("!!!");
-        Physics2D.IgnoreLayerCollision(9, 10,true);
-        c.a = 0.5f;
-        rend.material.color = c;
-        yield return new WaitForSeconds(3f);
-        Physics2D.IgnoreLayerCollision(9, 10, false);
-        c.a = 1f;
-        rend.material.color = c;
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("enemy"))
-        {
-            StartCoroutine("GetInvulnerable");
-        }
-    }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("jumpGround"))
-        {
-            realJumpPower = 2 * jumpPower;
-        }
-        else if(collision.gameObject.CompareTag("stickGround"))
-        {
-            realJumpPower = jumpPower/2;
-        }
-        else
-        {
-            realJumpPower = jumpPower;
-        }
-        if (collision.gameObject.CompareTag("fastGround"))
-        {
-            realMoveSpeed = 2 * moveSpeed;
-        }
-        else if (collision.gameObject.CompareTag("slowGround"))
-        {
-            realMoveSpeed = moveSpeed / 2;
-        }
-        else
-        {
-            realMoveSpeed = moveSpeed;
-        }
 
-    }
-    void Jump()
+public class ItemInfo : ScriptableObject
+//데이터를 저장하는 데 사용할 수 있는 데이터 컨테이너
+//불러올때마다 사본이 생성되는 것을 방지하여 메모리 사용을 줄임
+//프리팹이 있는 프로젝트의 경우 유용함 메모리에 데이터 사본을 하나만 저장
+{
+    public string itemName;
+}
+
+```
+
+* ItemInfo 스크립트이다.
+
+---------------
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+[CreateAssetMenu(menuName ="3Dgame/New Gun")]
+//해당이름 가진 에셋메뉴 만들어주기
+public class GunInfo : ItemInfo//아이템 인포로부터 받아옴
+{
+   
+}
+
+```
+
+* GunInfo 스크립트이다.  
+
+---------------
+
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-4.PNG" width="50%">  
+
+
+* Asset=>Items=>Guns폴더들을 만들어주자.  
+
+------------------------------------------------------     
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-5.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-6.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-7.PNG" width="50%">  
+
+
+* 2개의 New Gun을 만들어준다.    
+* 각각 Gun1과 Gun2로 이름 지어주고 item info에도 Gun1과 Gun2라고 써주자.  
+
+------------------------------------------------------     
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-8.PNG" width="50%">  
+
+* PlayerController 프리펩에서 itemHolder를 만들어주고 Gun1Item과 Gun2Item을 넣어주자.  
+
+------------------------------------------------------     
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-9.PNG" width="50%">  
+
+* Item 스크립트를 작정해주자.  
+
+------------------------------------------------------     
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-10.PNG" width="50%">  
+
+* 간단하게 itemInfo를 받고 해당 아이템 game Object를 등록할 수 있게 해준다.  
+
+---------------------------  
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Item : MonoBehaviour
+{
+    public ItemInfo itemInfo;
+    public GameObject itemGameObject;
+}
+
+```
+
+* Item스크립트이다.  
+
+------------------------------------------------------     
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-11.PNG" width="50%">  
+
+* GunItem안에 Gun1과 Gun2의 빈 gameObject를 넣고 총 모델링으로 쓸 큐브들을 넣어주자.  
+
+------------------------------------------------------     
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-12.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-13.PNG" width="50%">  
+
+* 두 총의 구분을 위해서 Gun1은 비교적 두껍게, Gun2은 얇게 만들어주자.  
+
+------------------------------------------------------     
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-14.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-15.PNG" width="50%">  
+
+* Gun1/2Item에 item 스크립트를 넣어주고 각각의 ItemInfo와 ItemGameObject를 넣어주자.  
+
+------------------------------------------------------     
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-16.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-17.PNG" width="50%">  
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-18.PNG" width="50%">  
+
+* PlayerContrller스크립트를 수정해주자.
+* 아이템 목록을 만들어주고 현재 아이템이 뭔지 알 수 있게 int를 선언해준다.  
+* 현재 아이템을 끼는 코드와 시작할때는 첫번째 아이템을 끼도록 코드를 수정해주자.  
+
+------------------------------------------------------    
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Photon.Pun;
+
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] float mouseSensitivity, sprintSpeed, walkSpeed, jumpForce, smoothTime;
+    [SerializeField] GameObject cameraHolder;
+    [SerializeField] Item[] items;
+    public int itemIndex;
+    public int previousItemIndex=-1;//기본 아이템 값 없도록
+    //마우스감도 뛰는속도 걷는속도 점프힘 뛰기걷기바꿀때 가속시간
+    float verticalLookRotation;
+    bool grounded;//점프를 위한 바닥체크
+    Vector3 smoothMoveVelocity;
+    Vector3 moveAmount;//실제 이동거리
+
+    Rigidbody rb;
+    PhotonView PV;
+
+    void Awake()
     {
-        if (isground)
+        rb = GetComponent<Rigidbody>();
+        PV = GetComponent<PhotonView>();
+    }
+
+    void Start()
+    {
+        if (PV.IsMine)
         {
-            jumpCounter = jumpTime;
+            EquipItem(0);//시작하고 내 포톤뷰면 1번 아이템끼기(2번 아이템은 번호상 1이다)
         }
         else
         {
-            jumpCounter -= Time.deltaTime;
-        }
-        if (Input.GetButtonDown("Jump")) //점프 키가 눌렸을 때//ground이면서 스페이스바 누르면 
-        {
-            jumpBufferCount = jumpBufferLength; 
-            //else return; //점프 중일 때는 실행하지 않고 바로 return.
-        }
-        else
-        {
-            jumpBufferCount -= Time.deltaTime;
-        }
-        if (Input.GetButtonUp("Jump")) 
-        {
-           rigid.velocity = new Vector2(rigid.velocity.x, rigid.velocity.y * 0.5f);//살짝 점프
-           
-        }
-        if (Input.GetButton("Jump"))
-        {
-           animator.SetBool("jump", true);
-        }
-        if (jumpBufferCount>=0&&jumpCounter > 0) //점프 중이지 않을 때
-        {
-            //rigid.AddForce(Vector2.up * realJumpPower, ForceMode2D.Impulse); //위쪽으로 힘을 준다.//반점프 사용하기위해서 이거말고 velocity사용
-            rigid.velocity = new Vector2(rigid.velocity.x, realJumpPower);
-            jumpBufferCount = 0;//점프 바로 못하게
-            isground = false;
+            Destroy(GetComponentInChildren<Camera>().gameObject);
+            //내꺼 아니면 카메라 없애기
+            Destroy(rb);
+            //내거아니면 리지드 바디 없애주기
         }
     }
+
+    void Update()
+    {
+        if (!PV.IsMine)
+            return;//내꺼아니면 작동안함
+        Look();
+        Move();
+        Jump();
+    }
+   
+    void Look() 
+    {
+        transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivity);
+        //마우스 움직이는 정도*민감도만큼 각도 움직이기
+        verticalLookRotation += Input.GetAxis("Mouse Y") * mouseSensitivity;
+        //마우스 움직이는 정도*민감도만큼 각도 값 받기
+        verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90f, 90f);
+        //y축 -90도에서 90도만 값으로 받음
+        cameraHolder.transform.localEulerAngles = Vector3.left * verticalLookRotation;
+        //받은 각도로 카메라도 돌려줌
+    }
+
     void Move()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        if (horizontal != 0)
+        Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+        //벡더방향을 가지지만 크기는 1로 노말라이즈
+        moveAmount = Vector3.SmoothDamp(moveAmount, moveDir * (Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed), ref smoothMoveVelocity, smoothTime);
+        //왼쪽 쉬프트가 누르면 뛰는속도, 나머지는 걷는속도로하기
+        //smoothTime만큼에 걸쳐서 이동해주기. 
+    }
+
+    void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)//땅위에서 스페이스바 누르면
         {
-            animator.SetBool("walk", true);//애니메이터 설정 walk를 true.
-            if (horizontal >= 0) this.transform.eulerAngles = new Vector3(0, 0, 0);
-            else this.transform.eulerAngles = new Vector3(0, 180, 0);
+            rb.AddForce(transform.up * jumpForce);//점프력만큼위로 힘받음
         }
-        else 
+    }
+
+    void EquipItem(int _index)
+    {
+        itemIndex = _index;
+        items[itemIndex].itemGameObject.SetActive(true);//itemIndex번쨰 아이템 on
+        if (previousItemIndex != -1)//만약 초기 상태가 아니라면
         {
-            animator.SetBool("walk", false);//좌우로 안움직이면 애니메이터 설정 walk false.
+            items[previousItemIndex].itemGameObject.SetActive(false);
+            //내가 아까 꼈던 아이템은 off
         }
-        Vector3 dir = math.abs(horizontal) * Vector3.right; //변수의 자료형을 맞추기 위해 생성한 새로운 Vector3 변수
-        this.transform.Translate(dir * realMoveSpeed * Time.deltaTime); //오브젝트 이동 함수
+        previousItemIndex = itemIndex;//무한 사이클
+    }
+
+    public void SetGroundedState(bool _grounded)
+    {
+        grounded = _grounded;
+    }
+
+    void FixedUpdate()
+    {
+        if (!PV.IsMine)
+            return;//내꺼아니면 작동안함
+        rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
+        //이동하는거는 계산 끝난 moveAmount만큼만 고정된시간(0.2초)마다에 맞춰서
     }
 }
+
 ```
-* 개선한 코드 전문이다.
-----------------------------
-[목차로](https://github.com/isp829/HU/blob/master/README.md)  
-[다음](https://github.com/isp829/HU/blob/master/lecture/lecture6-2.md)  
+
+* 수정한 PlayerController스크립트의 전문이다.  
+
+-------------------------------   
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-19.png" width="50%">  
+
+* 수정한 PlayerContrller에서 Gun1과 Gun2를 등록해주자.   
+
+------------------------------------------------------    
+<img src="https://github.com/isp829/3dunitymulty/blob/master/images/lecture6/lecture6-1/6-1-20.PNG" width="50%">  
+
+* 실행해보면 1번 아이템으로 등록한걸 들고있는걸 볼 수 있다.  
+
+------------------------------------------------------    
+[목차로](https://github.com/isp829/3dunitymulty/blob/master/README.md)  
+[다음](https://github.com/isp829/3dunitymulty/blob/master/lecture/lecture6-2.md)  
 -----------------------------
-    
