@@ -27,13 +27,20 @@ Photon PUN2를 이용한 멀티게임
    * [기본 조작 만들기2](lecture/lecture5-2.md)
 
 6. 사용할 아이템 만들기
-   * [사용할 아이템 만들기1](lecture/lecture6-1.md)      
+   * [사용할 아이템 만들기1](lecture/lecture6-1.md)    
    * [사용할 아이템 만들기2](lecture/lecture6-2.md)      
+   * [사용할 아이템 만들기3](lecture/lecture6-3.md)      
+   * [사용할 아이템 만들기4](lecture/lecture6-4.md)     
+   * [사용할 아이템 만들기5](lecture/lecture6-5.md)     
+   * [사용할 아이템 만들기6](lecture/lecture6-6.md)     
+   
    
 7. 술래 정하기
    * [술래정하기](lecture/lecture7-1.md)
 
 8. 교란용 클론 만들기
    * [교란용 클론 만들기](lecture/lecture8-1.md)
-   
+
+9. 다듬기
+   * [다듬기](lecture/lecture9-1.md)
 --------------------------
